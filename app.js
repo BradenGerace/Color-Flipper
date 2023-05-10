@@ -2,9 +2,11 @@ const colors = ["red", "green", "blue", "yellow", "pink", "purple", "brown", "rg
 const btn = document.getElementById("btn");
 const color = document.querySelector(".color");
 
-btn.addEventListener('click', function(){
-    console.log(document.body);
-})
+if (btn) {
+    btn.addEventListener('click', function(){
+        console.log(document.body);
+    })
+}
 
 // function randomNumberGenerator() {
 //     return Math.floor(Math.random()) 
