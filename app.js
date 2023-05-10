@@ -2,12 +2,13 @@ const colors = ["red", "green", "blue", "yellow", "pink", "purple", "brown", "rg
 const btn = document.getElementById("btn");
 const color = document.querySelector(".color");
 
-if (btn) {
-    btn.addEventListener('click', function(){
-        console.log(document.body);
-    })
-}
+btn.addEventListener('click', function(){
+    // get random number between 0 and colors length
+    const randomNumber = getRandomNumber();
+    document.body.style.backgroundColor = colors[randomNumber];
+    color.textContent = colors[randomNumber];
+})
 
-// function randomNumberGenerator() {
-//     return Math.floor(Math.random()) 
-// }
+function getRandomNumber() {
+    return Math.floor(Math.random() * colors.length);
+}
