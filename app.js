@@ -4,9 +4,8 @@ const color = document.querySelector(".color");
 
 btn.addEventListener('click', function(){
     // get random number between 0 and colors length
-    const randomNumber = getRandomNumber();
     document.body.style.backgroundColor = colors[randomNumber];
-    color.textContent = colors[randomNumber];
+    color.textContent = colors[getRandomNumber()];
 })
 
 function getRandomNumber() {
